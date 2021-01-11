@@ -29,18 +29,19 @@ target_a = 9
 '''
 def two_sum_a(nums, target):
     n = len(nums)
+    list_a = []
     for i in range(n):
         for j in range(i+1,n):
             if nums[i] + nums[j] == target:
-                return [i,j]
-    return []
+                list_a.append([i,j])
+    return list_a
 '''
 复杂度分析
 时间复杂度：O(N^2)，其中 N 是数组中的元素数量。最坏情况下数组中任意两个数都要被匹配一次。
 空间复杂度：O(1)。
 '''
 
-#print(two_sum_a(nums_a,target_a))
+print(two_sum_a(nums_a,target_a))
 
 
 
@@ -64,7 +65,7 @@ def two_sum_b(nums, target):
         if target - num in hashtable:
             return [hashtable[target - num ],i]
     return []
-print(two_sum_b(nums_a,target_a))
+#print(two_sum_b(nums_a,target_a))
 
 '''
 复杂度分析
